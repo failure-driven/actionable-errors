@@ -22,3 +22,17 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## TODO
+
+- [ ] what are the inbuilt actionable errors
+- [ ] how actionable errors are implemented `rails middleware`
+- [ ] how to add a new error on no route
+- [ ] what are all the possible errors
+- [ ] can you action errors in test mode?
+- [ ] why can't you see this in production?
+- [ ] why do they dissappear with bye bug
+- [ ] how to customize the display
+- [ ] abuse of actions
+- [ ] potential uses of actions with own libraries that need some setup
+
