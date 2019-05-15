@@ -5,7 +5,8 @@
   "scripts": {
     "start": "mdx-deck deck.mdx",
     "build": "mdx-deck build deck.mdx",
-    "help": "mdx-deck"
+    "help": "mdx-deck",
+    "build-github-pages": "mdx-deck --out-dir docs build deck.mdx" 
   },
   "devDependencies": {
     "mdx-deck": "^2.3.2"
