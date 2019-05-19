@@ -1,14 +1,48 @@
+export { default as theme } from './src';
 import { Head, Notes } from 'mdx-deck'
-
-export { theme } from './theme'
+import { Layout, BGImage } from './src';
 
 <Head>
   <title>Actionable Errors</title>
 </Head>
 
+export default Layout
+
+<BGImage src="images/synthwave_sunset.jpg" />
+
 # Actionable Errors
 
+<Notes>
+
+* bin/rails db:drop db:create
+* rails server
+
+</Notes>
+
 ---
+
+<iframe
+  frameBorder="0"
+  width="800"
+  height="450"
+  src="http://localhost:3000"
+  style={{
+    transform: 'scale(2.0)'
+  }}
+>
+</iframe>
+
+<Notes>
+
+* rails generate migration CreatePosts title:string text:text
+* ActiveRecord::Tasks::DatabaseTasks.migrate
+* bin/rails db:migrate
+
+</Notes>
+
+---
+
+export default Layout
 
 # Thank you
 
