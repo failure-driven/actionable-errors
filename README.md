@@ -37,6 +37,10 @@ Things you may want to cover:
 
 ## TODO
 
+- originally brought into rails with https://github.com/rails/rails/pull/36043
+- Actionable Errors for Active Storage and Action Mailbox as PR waiting to be
+  merged https://github.com/rails/rails/pull/36071
+
 - [ ] what are the inbuilt actionable errors
 - [ ] how actionable errors are implemented `rails middleware`
 - [ ] how to add a new error on no route
