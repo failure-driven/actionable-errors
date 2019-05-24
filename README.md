@@ -40,6 +40,7 @@ Things you may want to cover:
 - originally brought into rails with https://github.com/rails/rails/pull/36043
 - Actionable Errors for Active Storage and Action Mailbox as PR waiting to be
   merged https://github.com/rails/rails/pull/36071
+  - hit http://localhost:3000/rails/conductor/action_mailbox/inbound_emails/
 
 - [ ] what are the inbuilt actionable errors
 - [ ] how actionable errors are implemented `rails middleware`
