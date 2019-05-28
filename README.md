@@ -13,23 +13,23 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+- Ruby version
 
-* System dependencies
+- System dependencies
 
-* Configuration
+- Configuration
 
-* Database creation
+- Database creation
 
-* Database initialization
+- Database initialization
 
-* How to run the test suite
+- How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+- Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+- Deployment instructions
 
-* ...
+- ...
 
 <h1 align="center">Actionable Errors</h1>
 
@@ -40,12 +40,14 @@ Things you may want to cover:
 - originally brought into rails with https://github.com/rails/rails/pull/36043
 - Actionable Errors for Active Storage and Action Mailbox as PR waiting to be
   merged https://github.com/rails/rails/pull/36071
+
   - hit http://localhost:3000/rails/conductor/action_mailbox/inbound_emails/
 
 - [ ] what are the inbuilt actionable errors
 - [ ] how actionable errors are implemented `rails middleware`
 - [ ] how to add a new error on no route
 - [ ] what are all the possible errors
+
   - ActiveRecord::NoDatabaseError
   - Routing Error
     - no default route for test
@@ -58,11 +60,14 @@ Things you may want to cover:
     Puma caught this error: No route matches [GET] "/ggg" (ActionController::RoutingError)
     ```
   - Unknown action - not in below list
+
   ```
   AbstractController::ActionNotFound
   ```
+
   - which gets wrapped with actionpack/lib/action_dispatch/middleware/exception_wrapper.rb
   - looked at production
+
   ```
   sudo -u michael createuser --interactive
   Enter name of role to add: actionable_errors
@@ -71,12 +76,16 @@ Things you may want to cover:
   $ RAILS_ENV=production bin/rails db:create
   Created database 'actionable_errors_production'
   ```
+
   - but does not work with better errors gem
   - take a look at all errors found in rails?
+
   ```
   ag ' raise .*Error' . | awk -F 'raise' '{print $2}' | awk  '{print $1}' | sort | uniq | pbcopy
   ```
+
   which found the following errors
+
   ```
     ActiveSupport::Duration::ISO8601Parser::ParsingError
     NoMethodError
@@ -209,6 +218,7 @@ Things you may want to cover:
   ```
 - following docs for
   `activesupport/lib/active_support/actionable_error.rb`
+
   ```
   class GameController < ApplicationController
     class SomeError < StandardError
@@ -227,7 +237,8 @@ Things you may want to cover:
   ```
 
 include the <tt>ActiveSupport::ActionableError</tt>
-  # module and invoke the +action+
+
+# module and invoke the +action+
 
 - [x] can you action errors in test mode?
   - no just get a plain old text error
@@ -239,8 +250,16 @@ include the <tt>ActiveSupport::ActionableError</tt>
 - [ ] potential uses of actions with own libraries that need some setup
 
 - [x] first slide not rendering on https://failure-driven.github.io/actionable-errors/
+
   - problem using Reach Router in mdx-deck v2?
-   https://github.com/jxnblk/mdx-deck/blob/master/CHANGELOG.md#v1102-2019-03-10
+    https://github.com/jxnblk/mdx-deck/blob/master/CHANGELOG.md#v1102-2019-03-10
 
 - wallpaper https://wallpaperplay.com/board/synthwave-wallpapers
   "midnight purple pink cyber punk sun new retro wave"
+
+# other ideas
+
+- https://github.com/adolfintel/warpspeed
+- http://www.kevs3d.co.uk/dev/warpfield/
+  - http://www.kevs3d.co.uk/dev/warpfield/index-original.html#
+- https://ieftimov.com/post/writing-rails-middleware/

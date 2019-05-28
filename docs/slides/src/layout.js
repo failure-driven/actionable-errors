@@ -5,6 +5,7 @@ const FragmentWithBackground = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #292238;
+  color: #ffffff;
   background-image: url('images/synthwave_sunset.jpg');
   background-size: 100%;
 `;
@@ -47,7 +48,8 @@ const SpanHighlight = styled.span`
   margin-left: 0.2em;
   margin-right: 1em;
   font-weight: 800;
-  -webkit-text-stroke: 1px #ffffff;
+  color: #ffffff;
+  #-webkit-text-stroke: 1px #ffffff;
 `;
 
 const TwitterAvatar = ({ src, handle }) => (

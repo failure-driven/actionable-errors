@@ -1,5 +1,5 @@
 export { default as theme } from './src';
-import { Appear, Head, Notes } from 'mdx-deck';
+import { Appear, Head, Image, Notes } from 'mdx-deck';
 import { Layout, BGImage } from './src';
 
 <Head>
@@ -8,18 +8,124 @@ import { Layout, BGImage } from './src';
 
 export default Layout;
 
-# Actionable Errors
+# Actionable Errors<br />&nbsp;<br />&nbsp;<br />&nbsp;
 
-<Notes>
+---
 
-- anyone knows
-- what am I doing here?
-- dropped bar low, it's ok I have read the code of conduct, I only had 3 slides yesterday, they all had to be deleted, maybe still in the git repo :(
-- So I was at RailsConf in the US beginning of
-- bin/rails db:drop db:create
-- rails server
+# Warning - Taste in Technology
 
-</Notes>
+<Appear>
+<div>
+
+* Latitude
+
+</div>
+<div>
+
+* Buzz
+
+</div>
+<div>
+
+* Wave
+
+</div>
+<div>
+
+* Fusion Tables
+
+</div>
+</Appear>
+
+---
+
+# Java FX Script?
+
+<Appear>
+<div>
+
+<img width="150%" src="images/javafxscript.jpg" />
+
+</div>
+</Appear>
+
+---
+
+# VI everywhere
+
+<img src="images/vi_everywhere.png" />
+
+http://youtu.be/l6dwu6cCfkM
+
+---
+
+# Rails Conf 2019
+
+<img src="images/railsconf2019.png" />
+
+---
+
+<Image width="50vw" height="60vh" src="images/with_dhh.jpg" />
+
+---
+
+<Image width="50vw" height="60vh" src="images/genadi_homemade_rakia.jpg" />
+
+---
+
+<Image width="50vw" height="60vh" src="images/barnaby_kaftan_and_incense.png" />
+
+---
+
+<Image src="images/heidke_rise_earth.jpg" />
+
+---
+
+<img height="100%" src="images/dare_to_dream.jpg" />
+
+---
+
+https://edgeguides.rubyonrails.org/6_0_release_notes.html
+<Image width="60vw" src="images/01_rails_guides.png" />
+
+---
+
+https://bogdanvlviv.com/posts/ruby/rails/what-is-new-in-rails-6_0.html
+<Image width="60vw" src="images/02_whats_new_in_rails.png" />
+
+---
+
+https://prograils.com/posts/new-features-rails-6-multiple-databases-parallel-tests-action-mailbox-etc
+<Image width="60vw" src="images/03_new_features_in_rails.png" />
+
+---
+
+https://medium.com/rubyinside/whats-coming-to-rails-6-0-8ec79eea66da
+<Image width="60vw" src="images/04_whats_comming_in_rails.png" />
+
+---
+
+https://www.botreetechnologies.com/blog/notable-activerecord-changes-in-rails-6-part-1
+<Image width="60vw" src="images/05_notable_active_record_changes_p1.png" />
+
+---
+
+https://www.botreetechnologies.com/blog/notable-activerecord-changes-in-rails-6-part-2
+<Image width="60vw" src="images/06_notable_active_record_changes_p2.png" />
+
+---
+
+https://drivy.engineering/rails-6-unnoticed-features/
+<Image width="60vw" src="images/07_rails_unnoticed_features.png" />
+
+---
+
+https://evilmartians.com/chronicles/rails-6-b-sides-and-rarities
+<Image width="60vw" src="images/08_b_sides_and_rarities.png" />
+
+---
+
+<Image width="60vw" src="images/09_actionable_errors.png" />
 
 ---
 
@@ -47,9 +153,30 @@ export default Layout;
 
 # w00t so you can db:migrate
 
-```bash
+```
 rails db:migrate
 ```
+
+---
+
+# How does it work?
+
+---
+
+# via<br /> ActionDispatch::ActionableExceptions<br /> middleware
+
+```
+bin/rake middleware
+...
+use WebConsole::Middleware
+use ActionDispatch::DebugExceptions
+use ActionDispatch::ActionableExceptions
+...
+```
+
+---
+
+# Any exception that<br />includes ActiveSupport::ActionableError<br />and has an `action` block
 
 ---
 
@@ -84,8 +211,6 @@ end
 </Notes>
 
 ---
-
-export default Layout;
 
 # What else?
 
@@ -139,8 +264,6 @@ export default Layout;
 
 ---
 
-export default Layout;
-
 # ActionableErrors
 
 <Appear>
@@ -176,7 +299,5 @@ export default Layout;
 export default Layout;
 
 # Thank you
-
 ### http://failure-driven.com
-### https://github.com/failure-driven/actionable-errors
-### @saramic
+### https://github.com/failure-driven/actionable-errors<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />
