@@ -1,21 +1,23 @@
 export { default as theme } from './src';
-import { Head, Notes } from 'mdx-deck'
+import { Head, Notes } from 'mdx-deck';
 import { Layout, BGImage } from './src';
 
 <Head>
   <title>Actionable Errors</title>
 </Head>
 
-export default Layout
-
-<BGImage src="images/synthwave_sunset.jpg" />
+export default Layout;
 
 # Actionable Errors
 
 <Notes>
 
-* bin/rails db:drop db:create
-* rails server
+- anyone knows
+- what am I doing here?
+- dropped bar low, it's ok I have read the code of conduct, I only had 3 slides yesterday, they all had to be deleted, maybe still in the git repo :(
+- So I was at RailsConf in the US beginning of
+- bin/rails db:drop db:create
+- rails server
 
 </Notes>
 
@@ -29,20 +31,50 @@ export default Layout
   style={{
     transform: 'scale(2.0)'
   }}
->
-</iframe>
+/>
 
 <Notes>
 
-* rails generate migration CreatePosts title:string text:text
-* ActiveRecord::Tasks::DatabaseTasks.migrate
-* bin/rails db:migrate
+- rails generate migration CreateGame title:string description:text
+- ActiveRecord::Tasks::DatabaseTasks.migrate
+- bin/rails db:migrate
 
 </Notes>
 
 ---
 
-export default Layout
+<iframe
+  frameBorder="0"
+  width="800"
+  height="450"
+  src="http://localhost:3000/blogs"
+  style={{
+    transform: 'scale(2.0)'
+  }}
+/>
+
+<Notes>
+
+```
+class BlogsController < ApplicationController
+  class SomeError < StandardError
+#2  include ActiveSupport::ActionableError
+#2    action 'make it happen' do
+#2      puts ('✅ '\*10)
+#33     puts `rails generate scaffold Game name:string --force`
+#2    end
+  end
+
+  def index
+    raise SomeError
+  end
+end
+```
+
+</Notes>
+
+---
+
+export default Layout;
 
 # Thank you
-
