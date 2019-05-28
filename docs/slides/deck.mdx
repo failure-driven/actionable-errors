@@ -1,5 +1,5 @@
 export { default as theme } from './src';
-import { Head, Notes } from 'mdx-deck';
+import { Appear, Head, Notes } from 'mdx-deck';
 import { Layout, BGImage } from './src';
 
 <Head>
@@ -43,11 +43,21 @@ export default Layout;
 
 ---
 
+export default Layout;
+
+# w00t so you can db:migrate
+
+```bash
+rails db:migrate
+```
+
+---
+
 <iframe
   frameBorder="0"
   width="800"
   height="450"
-  src="http://localhost:3000/blogs"
+  src="http://localhost:3000/posts"
   style={{
     transform: 'scale(2.0)'
   }}
@@ -56,12 +66,12 @@ export default Layout;
 <Notes>
 
 ```
-class BlogsController < ApplicationController
+class PostsController < ApplicationController
   class SomeError < StandardError
 #2  include ActiveSupport::ActionableError
 #2  action 'do it now!' do
 #2    10.times{ puts ('✅ '*10) }
-#3    puts `rails generate scaffold Blog title:string text:text --force`
+#3    puts `rails generate scaffold Post title:string text:text --force`
 #2  end
   end
 
@@ -70,6 +80,53 @@ class BlogsController < ApplicationController
   end
 end
 ```
+
+</Notes>
+
+---
+
+export default Layout;
+
+# What else?
+
+<Appear>
+
+<div>
+
+* ActionMailbox
+
+</div>
+
+<div>
+
+* ActiveStorage
+
+</div>
+
+<div>
+
+* [Rails PR#36071](https://github.com/rails/rails/pull/36071)
+
+</div>
+</Appear>
+
+---
+
+<iframe
+  frameBorder="0"
+  width="800"
+  height="450"
+  src="http://localhost:3000/rails/conductor/action_mailbox/inbound_emails/"
+  style={{
+    transform: 'scale(2.0)'
+  }}
+/>
+
+<Notes>
+
+* routing :all => :blog
+* has_one_attached :image
+* td %= post.image.attachment ? image_tag(post.image.variant(resize_to_limit: [300, 300])) : '-'
 
 </Notes>
 
