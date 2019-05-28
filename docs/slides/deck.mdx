@@ -59,10 +59,10 @@ export default Layout;
 class BlogsController < ApplicationController
   class SomeError < StandardError
 #2  include ActiveSupport::ActionableError
-#2    action 'make it happen' do
-#2      puts ('✅ '\*10)
-#33     puts `rails generate scaffold Game name:string --force`
-#2    end
+#2  action 'do it now!' do
+#2    10.times{ puts ('✅ '*10) }
+#3    puts `rails generate scaffold Blog title:string text:text --force`
+#2  end
   end
 
   def index
